@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Hand Tracking Particles</title>
-</head>
-<body>
-  <script type="module">
-  import * as THREE from 'three';
+import * as THREE from 'three';
 import { Hands } from '@mediapipe/hands';
 import { Camera } from '@mediapipe/camera_utils';
 import * as dat from 'dat.gui';
@@ -78,7 +70,3 @@ hands.onResults((results) => {
 const gui = new dat.GUI();
 gui.add(state, 'template', ['heart', 'flowers', 'saturn', 'buddha', 'fireworks']).onChange(createShape);
 gui.addColor(state, 'color').onChange(val => material.color.set(val));
-    
-  </script>
-</body>
-</html>
